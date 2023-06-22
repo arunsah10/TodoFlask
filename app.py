@@ -15,8 +15,7 @@ class Todo(db.Model):
     desc=db.Column(db.String(500),nullable=False)
     date_created=db.Column(db.DateTime,default=datetime.utcnow)
     
-    def __repr__(self)->str:# method for printing
-        return f"{self.sno}-{self.title}"
+
 
 with app.app_context():
     db.create_all()
